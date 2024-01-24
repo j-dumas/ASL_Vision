@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>src.pose.cam API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.pose.cam</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import time
+import cv2
+import mediapipe as mp
+import numpy as np
+import string
+
+from src.pose.utils.cv_utils import *
+from src.pose.utils.hand_utils import *
+from src.pose.utils.list_utils import *
+import src.pose.utils.utils as utils
+
+from src.pose.finger import Finger as Finger
+from src.pose.hand import *
+from src.pose.calibration.calibrate_setup import CalibrateSetup
+import src.pose.parts as parts
+
+class Cam:
+    &#39;&#39;&#39;DOC&#39;&#39;&#39;
+
+    ALPHABET = string.ascii_lowercase
+
+    def __init__(self, neural_network):
+        # CAMERA &amp; SCREEN
+        self.__cap = cv2.VideoCapture(0)
+        self.__image = None
+        self.__height = 0
+        self.__width = 0
+        self.__mpDraw = mp.solutions.drawing_utils
+
+        # HANDS
+        self.__mpHands = mp.solutions.hands
+        self.__hands = self.__mpHands.Hands()
+        self.__handsResults = None
+        self.__handsLandmarks = None
+
+        self.__handIndex = -1 
+        self.__handL = Hand(HandType.LEFT)
+        self.__handR = Hand(HandType.RIGHT)
+
+        # BODY
+        self.__mpPose = mp.solutions.pose
+        self.__pose = self.__mpPose.Pose()
+        self.__bodyResults = None
+        self.__bodyLandmarks = None
+
+        self.__setup = CalibrateSetup()
+        self.__setup.setup(self.__handL.get_fingers())
+
+        self.__nn = neural_network
+
+    def read(self):
+        &#39;&#39;&#39;DOC&#39;&#39;&#39;
+        self.__start = time.time()
+        while self.__cap.isOpened():
+            success, self.__image = self.__cap.read()
+            imgRGB = cv2.cvtColor(self.__image, cv2.COLOR_BGR2RGB)
+            #render_final = cv2.cvtColor(self.__image, cv2.COLOR_BGR2GRAY)
+
+            self.__handsResults = self.__hands.process(imgRGB)
+            self.__bodyResults = self.__pose.process(imgRGB)
+            self.__height, self.__width, c = self.__image.shape
+
+            if self.__handsResults.multi_hand_landmarks and self.__bodyResults.pose_landmarks:
+                self.__handsLandmarks = self.__handsResults.multi_hand_landmarks
+                nbHands = len(self.__handsResults.multi_hand_landmarks)
+
+                # Boucle des deux mains (hands).
+                for i in range(nbHands):
+                    self.__handIndex = i
+                    self.__mpDraw.draw_landmarks(imgRGB, self.__handsLandmarks[i], self.__mpHands.HAND_CONNECTIONS)
+
+                    wirst = self.__handsLandmarks[i].landmark[parts.HandParts.WRIST]
+                    Hx, Hy = int(wirst.x * self.__width), int(wirst.y * self.__height)
+                    lowerDistance = -1
+                    
+                    # Boucle des parties du corps (poses).
+                    for bodyPart, self.__bodyLandmarks in enumerate(self.__bodyResults.pose_landmarks.landmark):
+                        if (bodyPart == parts.BodyParts.INDEX_L or bodyPart == parts.BodyParts.INDEX_R):
+                            BPx, BPy = int(self.__bodyLandmarks.x * self.__width), int(self.__bodyLandmarks.y * self.__height)
+
+                            if nbHands == 1:
+                                self.__reset_hands_index()
+                                self.__set_hands_info_according_to_hand_part(bodyPart, Hx, Hy, i)
+                                    
+                            elif nbHands == 2:
+                                distance = self.__get_distance_between_hand_parts_and_body_parts(BPx, BPy, Hx, Hy)
+                                
+                                if distance &lt; lowerDistance or lowerDistance == -1:
+                                    lowerDistance = distance
+
+                                    if (bodyPart == parts.BodyParts.INDEX_R):
+                                        self.__handR.set_index(i)
+                                        if (i == 0): self.__handL.set_index(1)
+                                        else: self.__handL.set_index(0)
+
+                                self.__set_hands_info_according_to_hand_index(Hx, Hy, i)
+
+                    cv2.circle(imgRGB, (Hx, Hy), 12, (0,0,255), cv2.FILLED)
+                    self.__send_to_nn()
+                                        
+            else:
+                self.__reset_hands_informations()
+
+            self.__display_hand_informations()
+
+            #cv2.imshow(&#39;Render Final&#39;, render_final)
+            cv2.imshow(&#34;Render Debug&#34;, self.__image)
+            cv2.waitKey(1)
+
+    def __display_text(self, image, text, index):
+        cv2.putText(image, text, (1, index*20), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (255, 0, 0), 1)
+
+    def __display_hand_informations(self):
+        if self.__setup.is_done():
+            self.__display_text(self.__image, &#34;L POSITION:&#34; + str(self.__handL.get_x()), 1)
+            self.__display_text(self.__image, &#34;L ORIENTATION:&#34; + str(self.__handL.get_orientation()), 2)
+            self.__display_text(self.__image, &#34;L ROTATION:&#34; + str(self.__handL.get_rotation()), 3)
+            self.__display_text(self.__image, &#34;L PINKY:&#34; + str(self.__handL.get_finger(0).get_stage()), 4)
+            self.__display_text(self.__image, &#34;L RING:&#34; + str(self.__handL.get_finger(1).get_stage()), 5)
+            self.__display_text(self.__image, &#34;L MIDDLE:&#34; + str(self.__handL.get_finger(2).get_stage()), 6)
+            self.__display_text(self.__image, &#34;L INDEX:&#34; + str(self.__handL.get_finger(3).get_stage()), 7)
+            self.__display_text(self.__image, &#34;L THUMB:&#34; + str(self.__handL.get_finger(4).get_stage()), 8)
+            self.__display_text(self.__image, &#34;R POSITION:&#34;+ str(self.__handR.get_x()), 9)
+            self.__display_text(self.__image, &#34;R ORIENTATION:&#34; + str(self.__handR.get_orientation()), 10)
+            self.__display_text(self.__image, &#34;R ROTATION:&#34; + str(self.__handR.get_rotation()), 11)
+            self.__display_text(self.__image, &#34;R PINKY:&#34; + str(self.__handR.get_finger(0).get_stage()), 12)
+            self.__display_text(self.__image, &#34;R RING:&#34; + str(self.__handR.get_finger(1).get_stage()), 13)
+            self.__display_text(self.__image, &#34;R MIDDLE:&#34; + str(self.__handR.get_finger(2).get_stage()), 14)
+            self.__display_text(self.__image, &#34;R INDEX:&#34; + str(self.__handR.get_finger(3).get_stage()), 15)
+            self.__display_text(self.__image, &#34;R THUMB:&#34; + str(self.__handR.get_finger(4).get_stage()), 16)
+        else:
+            self.__display_text(self.__image, &#34;Calibrate&#34;, 17)
+
+    def __is_in_screen(self, x, y):
+        if (x*self.__width &lt; 0 or x*self.__width &gt; self.__width): return False
+        if (y*self.__height &lt; 0 or y*self.__height &gt; self.__height): return False
+        return True
+
+    def __get_distance_between_hand_parts_and_body_parts(self, BPx, BPy, Hx, Hy):
+        return utils.distance_between(BPx, BPy, Hx, Hy)
+
+    def __reset_hands_index(self):
+        self.__handL.set_index(-1)
+        self.__handR.set_index(-1)
+        
+    def __reset_hands_informations(self):
+        self.__handL.reset()
+        self.__handR.reset()
+
+    def __set_hands_info_according_to_hand_part(self, bodyPart, Hx, Hy, i):
+        if self.__is_in_screen(self.__bodyLandmarks.x, self.__bodyLandmarks.y):
+            hand = self.__handL
+            if (bodyPart == parts.BodyParts.INDEX_L): self.__handR.reset()
+            if (bodyPart == parts.BodyParts.INDEX_R):
+                self.__handL.reset()
+                hand = self.__handR
+
+            hand.set_position(Hx,Hy)
+            self.__set_hands_rotation(hand, i)
+            self.__set_hand_orientation(hand, i)
+            self.__set_fingers_infos(hand, i)
+
+    def __set_hands_info_according_to_hand_index(self, hx, hy, i):
+        if (self.__handIndex == 0):
+            if (self.__handL.get_index() == 0):
+                self.__set_hand_all_infos(self.__handL, hx, hy, i)
+            elif (self.__handR.get_index() == 0):
+                self.__set_hand_all_infos(self.__handR, hx, hy, i)
+        elif (self.__handIndex == 1):
+            if (self.__handL.get_index() == 1):
+                self.__set_hand_all_infos(self.__handL, hx, hy, i)
+            elif (self.__handR.get_index() == 1):
+                self.__set_hand_all_infos(self.__handR, hx, hy, i)
+
+    def __set_hand_all_infos(self, hand, hx, hy, i):
+        hand.set_position(hx, hy)
+        self.__set_hands_rotation(hand, i)
+        self.__set_hand_orientation(hand, i)
+        self.__set_fingers_infos(hand, i)
+
+    def __set_fingers_infos(self, hand, i):
+        update_fingers(self.__handsLandmarks[i].landmark, fingers=hand.get_fingers())
+        ground = [hand.get_finger(3).get_last_joint(), hand.get_finger(0).get_last_joint()]
+
+        ####
+        self.__setup.evaluate(hand.get_fingers(), ground)
+
+        for finger in hand.get_fingers():
+            finger.set_stage(get_finger_stage(finger, ground, is_thumb = finger.is_thumb(), is_pinky= finger.is_pinky(), is_right_hand=(hand.get_type() != 1)))
+
+    def __set_hand_orientation(self, hand, i):
+        thumb = self.__handsLandmarks[i].landmark[parts.HandParts.THUMB_T]
+        pinky = self.__handsLandmarks[i].landmark[parts.HandParts.PINKY_T]
+        
+        if (hand.get_type() == HandType.LEFT and thumb.x &lt; pinky.x) or (hand.get_type() == HandType.RIGHT and thumb.x &gt; pinky.x):
+            if (hand.get_rotation() == HandRotation.UP): hand.set_orientation(HandOrientation.FRONT)
+            if (hand.get_rotation() == HandRotation.DOWN): hand.set_orientation(HandOrientation.BACK)
+        else: hand.set_orientation(HandOrientation.BACK)
+
+    def __set_hands_rotation(self, hand, i):
+        wirst = self.__handsLandmarks[i].landmark[parts.HandParts.WRIST]
+        handLMs = self.__handsLandmarks[i].landmark
+        fingers = [handLMs[parts.HandParts.THUMB_T], handLMs[parts.HandParts.INDEX_T], handLMs[parts.HandParts.MIDDLE_T], handLMs[parts.HandParts.RING_T] ,handLMs[parts.HandParts.PINKY_T]]
+
+        counter = 0
+        for j, finger in enumerate(fingers):
+            xDistance, yDistance = utils.positive(finger.x - wirst.x), utils.positive(finger.y - wirst.y)
+            
+            if yDistance &gt; xDistance:
+                if (finger.y &gt; wirst.y):
+                    j, counter = self.__set_hand_rotation(j, counter, hand, HandRotation.DOWN)
+                elif (finger.y &lt; wirst.y):
+                    j, counter = self.__set_hand_rotation(j, counter, hand, HandRotation.UP)
+            else:
+                if (hand.get_type() == HandType.LEFT and finger.x &gt; wirst.x) or (hand.get_type() == HandType.RIGHT and finger.x &lt; wirst.x):
+                    j, counter = self.__set_hand_rotation(j, counter, hand, HandRotation.LEFT)
+                if (hand.get_type() == HandType.LEFT and finger.x &lt; wirst.x) or (hand.get_type() == HandType.RIGHT and finger.x &gt; wirst.x):
+                    j, counter = self.__set_hand_rotation(j, counter, hand, HandRotation.RIGHT)
+
+
+    def __set_hand_rotation(self, j, counter, hand, handRotation):
+        counter += 1
+        if (j == 4):
+            if counter &gt;= 4: hand.set_rotation(handRotation)
+            else: j = counter = 0
+        return j, counter
+
+    def __build_array(self):
+        data = []
+        data.append(self.__handR.get_finger(4).get_stage())
+        data.append(self.__handR.get_finger(3).get_stage())
+        data.append(self.__handR.get_finger(2).get_stage())
+        data.append(self.__handR.get_finger(1).get_stage())
+        data.append(self.__handR.get_finger(0).get_stage())
+        data.append(self.__handR.get_orientation())
+        data.append(self.__handR.get_rotation())
+        return data
+
+    def __send_to_nn(self):
+        if (time.time() - self.__start) &gt;= 2 and self.__setup.is_done():
+            self.__start = time.time()
+            data = self.__build_array()
+            result = self.__nn.predict(np.array(data))
+            max_index = np.argmax(result)
+            letter = self.ALPHABET[max_index]
+            print(f&#39;Letter is {letter.upper()}&#39;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.pose.cam.Cam"><code class="flex name class">
+<span>class <span class="ident">Cam</span></span>
+<span>(</span><span>neural_network)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>DOC</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Cam:
+    &#39;&#39;&#39;DOC&#39;&#39;&#39;
+
+    ALPHABET = string.ascii_lowercase
+
+    def __init__(self, neural_network):
+        # CAMERA &amp; SCREEN
+        self.__cap = cv2.VideoCapture(0)
+        self.__image = None
+        self.__height = 0
+        self.__width = 0
+        self.__mpDraw = mp.solutions.drawing_utils
+
+        # HANDS
+        self.__mpHands = mp.solutions.hands
+        self.__hands = self.__mpHands.Hands()
+        self.__handsResults = None
+        self.__handsLandmarks = None
+
+        self.__handIndex = -1 
+        self.__handL = Hand(HandType.LEFT)
+        self.__handR = Hand(HandType.RIGHT)
+
+        # BODY
+        self.__mpPose = mp.solutions.pose
+        self.__pose = self.__mpPose.Pose()
+        self.__bodyResults = None
+        self.__bodyLandmarks = None
+
+        self.__setup = CalibrateSetup()
+        self.__setup.setup(self.__handL.get_fingers())
+
+        self.__nn = neural_network
+
+    def read(self):
+        &#39;&#39;&#39;DOC&#39;&#39;&#39;
+        self.__start = time.time()
+        while self.__cap.isOpened():
+            success, self.__image = self.__cap.read()
+            imgRGB = cv2.cvtColor(self.__image, cv2.COLOR_BGR2RGB)
+            #render_final = cv2.cvtColor(self.__image, cv2.COLOR_BGR2GRAY)
+
+            self.__handsResults = self.__hands.process(imgRGB)
+            self.__bodyResults = self.__pose.process(imgRGB)
+            self.__height, self.__width, c = self.__image.shape
+
+            if self.__handsResults.multi_hand_landmarks and self.__bodyResults.pose_landmarks:
+                self.__handsLandmarks = self.__handsResults.multi_hand_landmarks
+                nbHands = len(self.__handsResults.multi_hand_landmarks)
+
+                # Boucle des deux mains (hands).
+                for i in range(nbHands):
+                    self.__handIndex = i
+                    self.__mpDraw.draw_landmarks(imgRGB, self.__handsLandmarks[i], self.__mpHands.HAND_CONNECTIONS)
+
+                    wirst = self.__handsLandmarks[i].landmark[parts.HandParts.WRIST]
+                    Hx, Hy = int(wirst.x * self.__width), int(wirst.y * self.__height)
+                    lowerDistance = -1
+                    
+                    # Boucle des parties du corps (poses).
+                    for bodyPart, self.__bodyLandmarks in enumerate(self.__bodyResults.pose_landmarks.landmark):
+                        if (bodyPart == parts.BodyParts.INDEX_L or bodyPart == parts.BodyParts.INDEX_R):
+                            BPx, BPy = int(self.__bodyLandmarks.x * self.__width), int(self.__bodyLandmarks.y * self.__height)
+
+                            if nbHands == 1:
+                                self.__reset_hands_index()
+                                self.__set_hands_info_according_to_hand_part(bodyPart, Hx, Hy, i)
+                                    
+                            elif nbHands == 2:
+                                distance = self.__get_distance_between_hand_parts_and_body_parts(BPx, BPy, Hx, Hy)
+                                
+                                if distance &lt; lowerDistance or lowerDistance == -1:
+                                    lowerDistance = distance
+
+                                    if (bodyPart == parts.BodyParts.INDEX_R):
+                                        self.__handR.set_index(i)
+                                        if (i == 0): self.__handL.set_index(1)
+                                        else: self.__handL.set_index(0)
+
+                                self.__set_hands_info_according_to_hand_index(Hx, Hy, i)
+
+                    cv2.circle(imgRGB, (Hx, Hy), 12, (0,0,255), cv2.FILLED)
+                    self.__send_to_nn()
+                                        
+            else:
+                self.__reset_hands_informations()
+
+            self.__display_hand_informations()
+
+            #cv2.imshow(&#39;Render Final&#39;, render_final)
+            cv2.imshow(&#34;Render Debug&#34;, self.__image)
+            cv2.waitKey(1)
+
+    def __display_text(self, image, text, index):
+        cv2.putText(image, text, (1, index*20), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (255, 0, 0), 1)
+
+    def __display_hand_informations(self):
+        if self.__setup.is_done():
+            self.__display_text(self.__image, &#34;L POSITION:&#34; + str(self.__handL.get_x()), 1)
+            self.__display_text(self.__image, &#34;L ORIENTATION:&#34; + str(self.__handL.get_orientation()), 2)
+            self.__display_text(self.__image, &#34;L ROTATION:&#34; + str(self.__handL.get_rotation()), 3)
+            self.__display_text(self.__image, &#34;L PINKY:&#34; + str(self.__handL.get_finger(0).get_stage()), 4)
+            self.__display_text(self.__image, &#34;L RING:&#34; + str(self.__handL.get_finger(1).get_stage()), 5)
+            self.__display_text(self.__image, &#34;L MIDDLE:&#34; + str(self.__handL.get_finger(2).get_stage()), 6)
+            self.__display_text(self.__image, &#34;L INDEX:&#34; + str(self.__handL.get_finger(3).get_stage()), 7)
+            self.__display_text(self.__image, &#34;L THUMB:&#34; + str(self.__handL.get_finger(4).get_stage()), 8)
+            self.__display_text(self.__image, &#34;R POSITION:&#34;+ str(self.__handR.get_x()), 9)
+            self.__display_text(self.__image, &#34;R ORIENTATION:&#34; + str(self.__handR.get_orientation()), 10)
+            self.__display_text(self.__image, &#34;R ROTATION:&#34; + str(self.__handR.get_rotation()), 11)
+            self.__display_text(self.__image, &#34;R PINKY:&#34; + str(self.__handR.get_finger(0).get_stage()), 12)
+            self.__display_text(self.__image, &#34;R RING:&#34; + str(self.__handR.get_finger(1).get_stage()), 13)
+            self.__display_text(self.__image, &#34;R MIDDLE:&#34; + str(self.__handR.get_finger(2).get_stage()), 14)
+            self.__display_text(self.__image, &#34;R INDEX:&#34; + str(self.__handR.get_finger(3).get_stage()), 15)
+            self.__display_text(self.__image, &#34;R THUMB:&#34; + str(self.__handR.get_finger(4).get_stage()), 16)
+        else:
+            self.__display_text(self.__image, &#34;Calibrate&#34;, 17)
+
+    def __is_in_screen(self, x, y):
+        if (x*self.__width &lt; 0 or x*self.__width &gt; self.__width): return False
+        if (y*self.__height &lt; 0 or y*self.__height &gt; self.__height): return False
+        return True
+
+    def __get_distance_between_hand_parts_and_body_parts(self, BPx, BPy, Hx, Hy):
+        return utils.distance_between(BPx, BPy, Hx, Hy)
+
+    def __reset_hands_index(self):
+        self.__handL.set_index(-1)
+        self.__handR.set_index(-1)
+        
+    def __reset_hands_informations(self):
+        self.__handL.reset()
+        self.__handR.reset()
+
+    def __set_hands_info_according_to_hand_part(self, bodyPart, Hx, Hy, i):
+        if self.__is_in_screen(self.__bodyLandmarks.x, self.__bodyLandmarks.y):
+            hand = self.__handL
+            if (bodyPart == parts.BodyParts.INDEX_L): self.__handR.reset()
+            if (bodyPart == parts.BodyParts.INDEX_R):
+                self.__handL.reset()
+                hand = self.__handR
+
+            hand.set_position(Hx,Hy)
+            self.__set_hands_rotation(hand, i)
+            self.__set_hand_orientation(hand, i)
+            self.__set_fingers_infos(hand, i)
+
+    def __set_hands_info_according_to_hand_index(self, hx, hy, i):
+        if (self.__handIndex == 0):
+            if (self.__handL.get_index() == 0):
+                self.__set_hand_all_infos(self.__handL, hx, hy, i)
+            elif (self.__handR.get_index() == 0):
+                self.__set_hand_all_infos(self.__handR, hx, hy, i)
+        elif (self.__handIndex == 1):
+            if (self.__handL.get_index() == 1):
+                self.__set_hand_all_infos(self.__handL, hx, hy, i)
+            elif (self.__handR.get_index() == 1):
+                self.__set_hand_all_infos(self.__handR, hx, hy, i)
+
+    def __set_hand_all_infos(self, hand, hx, hy, i):
+        hand.set_position(hx, hy)
+        self.__set_hands_rotation(hand, i)
+        self.__set_hand_orientation(hand, i)
+        self.__set_fingers_infos(hand, i)
+
+    def __set_fingers_infos(self, hand, i):
+        update_fingers(self.__handsLandmarks[i].landmark, fingers=hand.get_fingers())
+        ground = [hand.get_finger(3).get_last_joint(), hand.get_finger(0).get_last_joint()]
+
+        ####
+        self.__setup.evaluate(hand.get_fingers(), ground)
+
+        for finger in hand.get_fingers():
+            finger.set_stage(get_finger_stage(finger, ground, is_thumb = finger.is_thumb(), is_pinky= finger.is_pinky(), is_right_hand=(hand.get_type() != 1)))
+
+    def __set_hand_orientation(self, hand, i):
+        thumb = self.__handsLandmarks[i].landmark[parts.HandParts.THUMB_T]
+        pinky = self.__handsLandmarks[i].landmark[parts.HandParts.PINKY_T]
+        
+        if (hand.get_type() == HandType.LEFT and thumb.x &lt; pinky.x) or (hand.get_type() == HandType.RIGHT and thumb.x &gt; pinky.x):
+            if (hand.get_rotation() == HandRotation.UP): hand.set_orientation(HandOrientation.FRONT)
+            if (hand.get_rotation() == HandRotation.DOWN): hand.set_orientation(HandOrientation.BACK)
+        else: hand.set_orientation(HandOrientation.BACK)
+
+    def __set_hands_rotation(self, hand, i):
+        wirst = self.__handsLandmarks[i].landmark[parts.HandParts.WRIST]
+        handLMs = self.__handsLandmarks[i].landmark
+        fingers = [handLMs[parts.HandParts.THUMB_T], handLMs[parts.HandParts.INDEX_T], handLMs[parts.HandParts.MIDDLE_T], handLMs[parts.HandParts.RING_T] ,handLMs[parts.HandParts.PINKY_T]]
+
+        counter = 0
+        for j, finger in enumerate(fingers):
+            xDistance, yDistance = utils.positive(finger.x - wirst.x), utils.positive(finger.y - wirst.y)
+            
+            if yDistance &gt; xDistance:
+                if (finger.y &gt; wirst.y):
+                    j, counter = self.__set_hand_rotation(j, counter, hand, HandRotation.DOWN)
+                elif (finger.y &lt; wirst.y):
+                    j, counter = self.__set_hand_rotation(j, counter, hand, HandRotation.UP)
+            else:
+                if (hand.get_type() == HandType.LEFT and finger.x &gt; wirst.x) or (hand.get_type() == HandType.RIGHT and finger.x &lt; wirst.x):
+                    j, counter = self.__set_hand_rotation(j, counter, hand, HandRotation.LEFT)
+                if (hand.get_type() == HandType.LEFT and finger.x &lt; wirst.x) or (hand.get_type() == HandType.RIGHT and finger.x &gt; wirst.x):
+                    j, counter = self.__set_hand_rotation(j, counter, hand, HandRotation.RIGHT)
+
+
+    def __set_hand_rotation(self, j, counter, hand, handRotation):
+        counter += 1
+        if (j == 4):
+            if counter &gt;= 4: hand.set_rotation(handRotation)
+            else: j = counter = 0
+        return j, counter
+
+    def __build_array(self):
+        data = []
+        data.append(self.__handR.get_finger(4).get_stage())
+        data.append(self.__handR.get_finger(3).get_stage())
+        data.append(self.__handR.get_finger(2).get_stage())
+        data.append(self.__handR.get_finger(1).get_stage())
+        data.append(self.__handR.get_finger(0).get_stage())
+        data.append(self.__handR.get_orientation())
+        data.append(self.__handR.get_rotation())
+        return data
+
+    def __send_to_nn(self):
+        if (time.time() - self.__start) &gt;= 2 and self.__setup.is_done():
+            self.__start = time.time()
+            data = self.__build_array()
+            result = self.__nn.predict(np.array(data))
+            max_index = np.argmax(result)
+            letter = self.ALPHABET[max_index]
+            print(f&#39;Letter is {letter.upper()}&#39;)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="src.pose.cam.Cam.ALPHABET"><code class="name">var <span class="ident">ALPHABET</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="src.pose.cam.Cam.read"><code class="name flex">
+<span>def <span class="ident">read</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>DOC</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read(self):
+    &#39;&#39;&#39;DOC&#39;&#39;&#39;
+    self.__start = time.time()
+    while self.__cap.isOpened():
+        success, self.__image = self.__cap.read()
+        imgRGB = cv2.cvtColor(self.__image, cv2.COLOR_BGR2RGB)
+        #render_final = cv2.cvtColor(self.__image, cv2.COLOR_BGR2GRAY)
+
+        self.__handsResults = self.__hands.process(imgRGB)
+        self.__bodyResults = self.__pose.process(imgRGB)
+        self.__height, self.__width, c = self.__image.shape
+
+        if self.__handsResults.multi_hand_landmarks and self.__bodyResults.pose_landmarks:
+            self.__handsLandmarks = self.__handsResults.multi_hand_landmarks
+            nbHands = len(self.__handsResults.multi_hand_landmarks)
+
+            # Boucle des deux mains (hands).
+            for i in range(nbHands):
+                self.__handIndex = i
+                self.__mpDraw.draw_landmarks(imgRGB, self.__handsLandmarks[i], self.__mpHands.HAND_CONNECTIONS)
+
+                wirst = self.__handsLandmarks[i].landmark[parts.HandParts.WRIST]
+                Hx, Hy = int(wirst.x * self.__width), int(wirst.y * self.__height)
+                lowerDistance = -1
+                
+                # Boucle des parties du corps (poses).
+                for bodyPart, self.__bodyLandmarks in enumerate(self.__bodyResults.pose_landmarks.landmark):
+                    if (bodyPart == parts.BodyParts.INDEX_L or bodyPart == parts.BodyParts.INDEX_R):
+                        BPx, BPy = int(self.__bodyLandmarks.x * self.__width), int(self.__bodyLandmarks.y * self.__height)
+
+                        if nbHands == 1:
+                            self.__reset_hands_index()
+                            self.__set_hands_info_according_to_hand_part(bodyPart, Hx, Hy, i)
+                                
+                        elif nbHands == 2:
+                            distance = self.__get_distance_between_hand_parts_and_body_parts(BPx, BPy, Hx, Hy)
+                            
+                            if distance &lt; lowerDistance or lowerDistance == -1:
+                                lowerDistance = distance
+
+                                if (bodyPart == parts.BodyParts.INDEX_R):
+                                    self.__handR.set_index(i)
+                                    if (i == 0): self.__handL.set_index(1)
+                                    else: self.__handL.set_index(0)
+
+                            self.__set_hands_info_according_to_hand_index(Hx, Hy, i)
+
+                cv2.circle(imgRGB, (Hx, Hy), 12, (0,0,255), cv2.FILLED)
+                self.__send_to_nn()
+                                    
+        else:
+            self.__reset_hands_informations()
+
+        self.__display_hand_informations()
+
+        #cv2.imshow(&#39;Render Final&#39;, render_final)
+        cv2.imshow(&#34;Render Debug&#34;, self.__image)
+        cv2.waitKey(1)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.pose" href="index.html">src.pose</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.pose.cam.Cam" href="#src.pose.cam.Cam">Cam</a></code></h4>
+<ul class="">
+<li><code><a title="src.pose.cam.Cam.ALPHABET" href="#src.pose.cam.Cam.ALPHABET">ALPHABET</a></code></li>
+<li><code><a title="src.pose.cam.Cam.read" href="#src.pose.cam.Cam.read">read</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

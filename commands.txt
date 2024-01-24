@@ -1,0 +1,17 @@
+# Create virtual env
+
+## Linux
+python3 -m venv --system-site-packages ./venv
+source ./venv/bin/activate
+
+## Windows
+python -m venv --system-site-packages .\venv
+.\venv\Scripts\activate
+
+pip install --upgrade pip
+
+## Install tensorflow in venv
+pip install --upgrade tensorflow
+
+## Install OpenCV in venv
+pip install opencv-python

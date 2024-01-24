@@ -1,0 +1,15 @@
+usage: python3 main.py [-h] [-e=VALUE] [-t] [-r] [-nb_of_letters=VALUE]
+
+Python app for ASL Alphabet translation.
+
+Optional arguments:
+  -h, --help              show this help message and exit
+  -d, --debug             print debug informations on the render screen
+  -e, --epochs=VALUE      number of times the AI will pass over the training set
+  -t, --training          tells the AI to train instead of predict
+  -r, --restart           tell the AI to restart itself by regenerating weights and biases
+                          instead of reading the data file
+  --nb_of_letters=VALUE   number of letter instances for each letter contained in the
+                          training set
+
+Arguments epochs, restart and nb_of_letters only work when the argument train is activated

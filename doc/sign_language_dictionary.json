@@ -1,0 +1,132 @@
+{
+	"a": {
+		"fingers": [1, 0, 0, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"b": {
+		"fingers": [0.2158, 1, 1, 1, 1],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"c": {
+		"fingers": [0.805, 742, 0.7671, 0.8531, 0.9251],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"d": {
+		"fingers": [0.6692, 1, 0, 0, 0.1005],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"e": {
+		"fingers": [0.3662, 0.0591, 0.0295, 0.0764, 0.1367],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"f": {
+		"fingers": [0.9769, 0, 1, 1, 1],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"g": {
+		"fingers": [0.7317, 0.9962, 0, 0, 0],
+		"orientation": 2,
+		"rotation": 1
+	},
+	"h": {
+		"fingers": [0.4317, 0.9221, 0.9206, 0, 0],
+		"orientation": 2,
+		"rotation": 1
+	},
+	"i": {
+		"fingers": [0.9216, 0, 0, 0, 1],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"j": {
+		"fingers": [0.998, 0, 0, 0, 0.8823],
+		"orientation": 0,
+		"rotation": 1
+	},
+	"k": {
+		"fingers": [0.6712, 1, 1, 0, 0],
+		"orientation": 2,
+		"rotation": 0
+	},
+	"l": {
+		"fingers": [1, 1, 0, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"m": {
+		"fingers": [0.4646, 0.3834, 0.3185, 0.2178, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"n": {
+		"fingers": [0.5432, 0.354, 0.3674, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"o": {
+		"fingers": [1, 0.8647, 0.8284, 0.9835, 1],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"p": {
+		"fingers": [0.0938, 1, 1, 0, 0],
+		"orientation": 2,
+		"rotation": 1
+	},
+	"q": {
+		"fingers": [0.3079, 1, 0.8767, 0.6894, 0.6682],
+		"orientation": 2,
+		"rotation": 2
+	},
+	"r": {
+		"fingers": [0.6083, 1, 1, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"s": {
+		"fingers": [0.5533, 0, 0, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"t": {
+		"fingers": [0.6566, 0, 0, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"u": {
+		"fingers": [0.4514, 1, 1, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"v": {
+		"fingers": [0.2742, 1, 1, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"w": {
+		"fingers": [0.2024, 1, 1, 1, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"x": {
+		"fingers": [0.8035, 0.733, 0, 0, 0],
+		"orientation": 0,
+		"rotation": 0
+	},
+	"y": {
+		"fingers": [1, 0, 0, 0, 0.7866],
+		"orientation": 0,
+		"rotation": 1
+	},
+	"z": {
+		"fingers": [0.8132, 0.8772, 0, 0, 0],
+		"orientation": 2,
+		"rotation": 1
+	}
+}
